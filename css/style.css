@@ -8,12 +8,16 @@ body{
 }
 
 .headerContainer h1 {
-    border: 3px solid blue;
+    border: 5px double blue;
     font-family: 'Bigshot One', cursive;
     text-align: center;
     padding: 20px;
     margin: 20px;
     color: white;
+    background-color: rgba(0, 0, 0, 0.835);
+    -webkit-box-shadow: -10px 0px 13px -7px #ffffff, 10px 0px 13px -7px #ffffff, 5px 5px 19px -4px rgb(255, 255, 255); 
+box-shadow: -10px 0px 13px -7px #ffffff, 10px 0px 13px -7px #ffffff, 5px 5px 19px -4px rgb(255, 255, 255);
+    
 }
 
 .headerContainer h3 {
@@ -31,6 +35,8 @@ body{
     width: 60%;
     background-color: rgba(0, 0, 0, 0.835);
     color: rgba(255, 204, 0, 0.868);
+    -webkit-box-shadow: -10px 0px 13px -7px #eb781a, 10px 0px 13px -7px #eb781a, 5px 5px 19px -4px rgba(0, 0, 0, 0.565); 
+box-shadow: -10px 0px 13px -7px #eb781a, 10px 0px 13px -7px #eb781a, 5px 5px 19px -4px rgb(255, 255, 255);
 }
 
 .instructions p {
@@ -46,6 +52,8 @@ body{
     display: flex;
     justify-content: space-evenly;
     background-color: rgba(0, 0, 0, 0.835);
+    -webkit-box-shadow: 5px 5px 19px 7px #FFFFFF; 
+box-shadow: 5px 5px 19px 7px #FFFFFF;
 }
 
 .hameBoardContainer , .math , 
@@ -112,3 +120,4 @@ body{
     color: rgba(255, 204, 0, 0.868);
     font-size: 20px;
 }
+
