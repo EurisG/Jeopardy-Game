@@ -1,0 +1,114 @@
+*{
+    /* border: 1px solid black; */
+}
+
+body{
+    background: rgb(251,126,63);
+    background: radial-gradient(circle, rgba(251,126,63,0.7988110422740524) 0%, rgba(71,70,252,1) 100%);
+}
+
+.headerContainer h1 {
+    border: 3px solid blue;
+    font-family: 'Bigshot One', cursive;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+}
+
+.headerContainer h3 {
+    color: white;
+    font-family: 'Bigshot One', cursive;
+}
+
+
+.headerContainer .instructions {
+    border: 3px double red;
+    text-align: center;
+    line-height: 30px;
+    padding: 10px;
+    margin: 30px;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.835);
+    color: rgba(255, 204, 0, 0.868);
+}
+
+.instructions p {
+    font-weight:600;
+    font-family: 'Bigshot One', cursive;
+}
+
+.gameBoardContainer {
+    border: 3px solid green;
+    height: 30rem;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.835);
+}
+
+.hameBoardContainer , .math , 
+.history , .science , .music , .sports {
+    width: 15%;
+    text-align: center;
+    border: 2px solid black;
+    color: white;
+    background-color: rgba(31, 31, 223, 0.817);
+}
+
+.gameBoardContainer h4 {
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+.math h5  {
+    margin: 10px;
+    margin-top: 20px;
+    padding: 4px;
+    height: 50px;
+    border: 2px solid black;
+    color: rgba(255, 204, 0, 0.868);
+    font-size: 20px;
+}
+
+.history h5{
+    margin: 10px;
+    margin-top: 20px;
+    padding: 4px;
+    height: 50px;
+    border: 2px solid black;
+    color: rgba(255, 204, 0, 0.868);
+    font-size: 20px;
+}
+
+.science h5 {
+    margin: 10px;
+    margin-top: 20px;
+    padding: 4px;
+    height: 50px;
+    border: 2px solid black;
+    color: rgba(255, 204, 0, 0.868);
+    font-size: 20px;
+}
+
+.music h5 {
+    margin: 10px;
+    margin-top: 20px;
+    padding: 4px;
+    height: 50px;
+    border: 2px solid black;
+    color: rgba(255, 204, 0, 0.868);
+    font-size: 20px;
+}
+
+.sports h5 {
+    margin: 10px;
+    margin-top: 20px;
+    padding: 4px;
+    height: 50px;
+    border: 2px solid black;
+    color: rgba(255, 204, 0, 0.868);
+    font-size: 20px;
+}
