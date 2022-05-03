@@ -1,11 +1,14 @@
-*{
-    /* border: 1px solid black; */
-}
+/* *{
+    border: 1px solid black;
+} */
 
 body{
     background: rgb(251,126,63);
     background: radial-gradient(circle, rgba(251,126,63,0.7988110422740524) 0%, rgba(71,70,252,1) 100%);
 }
+
+
+/* header  */
 
 .headerContainer h1 {
     border: 5px double blue;
@@ -25,6 +28,7 @@ box-shadow: -10px 0px 13px -7px #ffffff, 10px 0px 13px -7px #ffffff, 5px 5px 19p
     font-family: 'Bigshot One', cursive;
 }
 
+/* .instructions */
 
 .headerContainer .instructions {
     border: 3px double red;
@@ -44,8 +48,10 @@ box-shadow: -10px 0px 13px -7px #eb781a, 10px 0px 13px -7px #eb781a, 5px 5px 19p
     font-family: 'Bigshot One', cursive;
 }
 
+/* gameboard  */
+
 .gameBoardContainer {
-    border: 3px solid green;
+    border: 5px double green;
     height: 30rem;
     margin: 20px;
     padding: 10px;
@@ -71,6 +77,8 @@ box-shadow: 5px 5px 19px 7px #FFFFFF;
     border: 2px solid black;
 }
 
+/* math  */
+
 .math h5  {
     margin: 10px;
     margin-top: 20px;
@@ -80,6 +88,20 @@ box-shadow: 5px 5px 19px 7px #FFFFFF;
     color: rgba(255, 204, 0, 0.868);
     font-size: 20px;
 }
+
+.math h5:hover  {
+    margin: 10px;
+    margin-top: 20px;
+    padding: 4px;
+    height: 50px;
+    border: 2px solid black;
+    font-size: 20px;
+    color: rgba(255, 0, 0, 0.868);
+    background-color: rgba(255, 255, 255, 0.471);
+    cursor: pointer;
+}
+
+/* history  */
 
 .history h5{
     margin: 10px;
@@ -91,6 +113,20 @@ box-shadow: 5px 5px 19px 7px #FFFFFF;
     font-size: 20px;
 }
 
+.history h5:hover  {
+    margin: 10px;
+    margin-top: 20px;
+    padding: 4px;
+    height: 50px;
+    border: 2px solid black;
+    font-size: 20px;
+    color: rgba(255, 0, 0, 0.868);
+    background-color: rgba(255, 255, 255, 0.471);
+    cursor: pointer;
+}
+
+/* science  */
+
 .science h5 {
     margin: 10px;
     margin-top: 20px;
@@ -100,6 +136,20 @@ box-shadow: 5px 5px 19px 7px #FFFFFF;
     color: rgba(255, 204, 0, 0.868);
     font-size: 20px;
 }
+
+.science h5:hover  {
+    margin: 10px;
+    margin-top: 20px;
+    padding: 4px;
+    height: 50px;
+    border: 2px solid black;
+    font-size: 20px;
+    color: rgba(255, 0, 0, 0.868);
+    background-color: rgba(255, 255, 255, 0.471);
+    cursor: pointer;
+}
+
+/* music  */
 
 .music h5 {
     margin: 10px;
@@ -111,6 +161,20 @@ box-shadow: 5px 5px 19px 7px #FFFFFF;
     font-size: 20px;
 }
 
+.music h5:hover  {
+    margin: 10px;
+    margin-top: 20px;
+    padding: 4px;
+    height: 50px;
+    border: 2px solid black;
+    font-size: 20px;
+    color: rgba(255, 0, 0, 0.868);
+    background-color: rgba(255, 255, 255, 0.471);
+    cursor: pointer;
+}
+
+/* sports  */
+
 .sports h5 {
     margin: 10px;
     margin-top: 20px;
@@ -121,3 +185,14 @@ box-shadow: 5px 5px 19px 7px #FFFFFF;
     font-size: 20px;
 }
 
+.sports h5:hover  {
+    margin: 10px;
+    margin-top: 20px;
+    padding: 4px;
+    height: 50px;
+    border: 2px solid black;
+    font-size: 20px;
+    color: rgba(255, 0, 0, 0.868);
+    background-color: rgba(255, 255, 255, 0.471);
+    cursor: pointer;
+}
