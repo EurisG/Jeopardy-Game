@@ -10,32 +10,38 @@
         <link rel="stylesheet" href="./css/style.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bigshot+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bigshot+One&display=swap" rel="stylesheet">
+       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     </head>
     <body>
 
         <!-- Header title  -->
-      <div class="headerContainer">
+    <div class="headerContainer">
 
             <h1>Welcome to Jeopardy</h1>
-
+         
         <!-- instruction container  -->
-        <div class="instructions">
-        <h3>Instructions</h3>
+        <div class="centerIns">
+            <div class="instructions">
+                 <h3>Instructions</h3>
 
-        <p>Hit "start game" and game will choose a player to go first. <br>
-            You will have 20 seconds to answer the question. <br>
-            Points will range from 100 to 500 points. <br>
-            Player to hit 3,000 points first wins! <br>
-            To start game over you can press the "restart" button. <br>
-            May best player win! <br>
-            Enjoy!
-             </p>
+                    <p>Hit "start game" and game will choose a player to go first. <br>
+                        You will have 20 seconds to answer the question. <br>
+                        Points will range from 100 to 500 points. <br>
+                        Player to hit 3,000 points first, wins! <br>
+                        To start game over you can press the "restart" button. <br>
+                        May best player win! <br>
+                        Enjoy!
+                    </p>
             
-        </div>
+            </div>
     
-    </div>
+         </div>
+     </div>
         <!-- gameboard container  -->
 
             <div class="gameBoardContainer">
@@ -52,6 +58,7 @@
                     <h5 class="mathFour">400</h5>
                     <h5 class="mathFive">500</h5>
                 </div>
+                
                 <div class="history">
                     <h4>History</h4>
                     <hr>
@@ -61,6 +68,7 @@
                     <h5 class="hsFour">400</h5>
                     <h5 class="hsFive">500</h5>
                 </div>
+                
                 <div class="science">
                     <h4>Science</h4>
                     <hr>
@@ -70,6 +78,7 @@
                     <h5 class="sciFour">400</h5>
                     <h5 class="sciFive">500</h5>
                 </div>
+                
                 <div class="music">
                     <h4>Music</h4>
                     <hr>
@@ -79,6 +88,7 @@
                     <h5 class="musFour">400</h5>
                     <h5 class="musFive">500</h5>
                 </div>
+               
                 <div class="sports">
                     <h4>Sports</h4>
                     <hr>
@@ -118,21 +128,27 @@
             </div>
 
 
-            <!-- player 1 and two score board     -->
+            <!-- player one and two score board     -->
 
-
+        <div class="centerScore">
             <div class="scoreContainer">
 
 
-                <div class="playerOne"></div>
+                <div class="playerOne">
+                    <h4>Player One</h4>
+                        <div class="playOne">Points: <span>0</span></div>
+                </div>
 
-                <div class="playerTwo"></div>
+                <div class="playerTwo">
+                    <h4>Player Two</h4>
+                        <div class="playTwo">Points: <span>0</span></div>
+                </div>
 
 
 
-            </div>
+             </div>
 
-
+        </div>
         <script src="./js/index.js" async defer></script>
     </body>
 </html>
