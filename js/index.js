@@ -7,12 +7,14 @@ const start = document.querySelector('.sBtn')
 const restart = document.querySelector('.rBtn')
 let scoreBoard = 0
 
-
+// players one true and player two false 
 let isPlayerTurn = true
 let playerScoreTracker = {
     true : 0,
     false: 0
 }
+
+
 let winner = true
 
 let timer = document.querySelector('.timer')
@@ -43,6 +45,14 @@ function restartBtn() {
          } else {
               document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
          }
+    } else if(playerScoreTracker[isPlayerTurn] <= 2500) {
+        //  playerScoreTracker[isPlayerTurn] = 0 
+        playerScoreTracker[isPlayerTurn] = 0
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
     } else {
         console.log('Error Please refresh the page ! ')
 
