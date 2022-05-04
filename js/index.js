@@ -550,7 +550,7 @@ const  toggleMusFour = () => {
     let musRiddleFour = prompt(' Which band wrote the song "Hey Jude" ? ')
     if (musRiddleFour === 'The Beatles') {
         alert('Correct! Player goes again !')
-        playerScoreTracker[isPlayerTurn] += 300
+        playerScoreTracker[isPlayerTurn] += 400
         if (isPlayerTurn === true) {
             document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
         } else {
@@ -577,7 +577,144 @@ const  toggleMusFive = () => {
     let musRiddleFive = prompt(' Which K-POP group is the most known ? ')
     if (musRiddleFive === 'bts') {
         alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 500
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+
+// ------------------ Sport Questions ------------ 
+// sport question 1
+const  toggleSportsOne = () => {
+    
+    let sportsRiddleOne = prompt(' Who is the greatest basketball player of all time ? ')
+    if (sportsRiddleOne === 'Michael Jordan') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 100
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// sport question 2
+const  toggleSportsTwo = () => {
+    
+    let sportsRiddleTwo = prompt(' The Olympics are held every how many years ? ')
+    if (sportsRiddleTwo === '4 years') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 200
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// sport question 3
+const  toggleSportsThree = () => {
+    
+    let sportsRiddleThree = prompt(' What do you call it when a bowler makes three strikes in a row ? ')
+    if (sportsRiddleThree === 'Turkey') {
+        alert('Correct! Player goes again !')
         playerScoreTracker[isPlayerTurn] += 300
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// sport question 4
+const  toggleSportsFour = () => {
+    
+    let sportsRiddleFour = prompt(' Which boxer fought against Muhammad Ali and won ? ')
+    if (sportsRiddleFour === 'Joe Frazier') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 400
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// sport question 5
+const  toggleSportsFive = () => {
+    
+    let sportsRiddleFive = prompt(' How many players are on a baseball teamn ? ')
+    if (sportsRiddleFive === '9') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 500
         if (isPlayerTurn === true) {
             document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
         } else {
