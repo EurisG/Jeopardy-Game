@@ -8,6 +8,14 @@ const restart = document.querySelector('.rBtn')
 let scoreBoard = 0
 
 
+let isPlayerTurn = true
+let playerScoreTracker = {
+    true : 0,
+    false: 0
+}
+
+
+
 // start button function 
 
 function startGame() {
@@ -19,14 +27,45 @@ function startGame() {
          
 
         if (randomPlayer === 'Player One'){
-             return alert('Player One select a question !')
+            isPlayerTurn = true
+             return alert('Player One goes first. Please select a question !')
         } else if (randomPlayer === 'Player Two') {
-            return alert('Player Two select a question !')
+            isPlayerTurn = false
+            return alert('Player Two goes first. Please select a question !')
         } else {
             return alert('Please press start again !')
         }
     }
-    console.log(`${randomPlayer}  can pick question ! `)
+}
+
+// jeopardy question sysytem 
+
+const  toggleMathOne = () => {
+    
+    let mathRiddleOne = prompt(' 30 + 40 = ? ')
+    if (mathRiddleOne === '70') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 100
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+
+
+    console.log(playerScoreTracker)
 }
 
 
@@ -34,7 +73,7 @@ function startGame() {
 
 
 
-// jeopardy question sysytem 
+
 
 
 // restart button function 
@@ -46,35 +85,3 @@ function startGame() {
 
 
 
-
-
-
-
-
-
-
-// function start(){
-//    let players = ['Player One' , 'Player Two'];
-//     let randomPlayer = [];
-
-//     for (let i = 0 ; i = players.length ; i++) {
-//         randomPlayer.push(i);
-//     }
-
-//     if (randomPlayer === 'Player One'){
-//         alert('Player One gets to Pick')
-//     } else {
-//         alert('Player Two gets to first')
-//     }
-// }
-
-// var randomPlayerChosen = []; 
-// for (var i = 0 ; i < 2 ; i++){
-//     var players = randomPlayer.length
-//     var randomPlayer = Math.floor(Math.random() * players);
-
-//     randomPlayerChosen.push(players[randomPlayer]);
-
-
-// }
-    
