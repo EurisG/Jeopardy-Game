@@ -493,10 +493,91 @@ const  toggleMusOne = () => {
 // music question 2
 const  toggleMusTwo = () => {
     
-    let musRiddleTwo = prompt(' Which artist sings "All I want for christmas is you" ? ')
-    if (musRiddleTwo === 'Mariah Carey') {
+    let musRiddleTwo = prompt(' Which artist is known as the "King of Pop" ? ')
+    if (musRiddleTwo === 'Michael Jackson') {
         alert('Correct! Player goes again !')
-        playerScoreTracker[isPlayerTurn] += 100
+        playerScoreTracker[isPlayerTurn] += 200
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// music question 3
+const  toggleMusThree = () => {
+    
+    let musRiddleThree = prompt(' Which artist is known as "YEEZY" ? ')
+    if (musRiddleThree === 'Kanye West') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 300
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// music question 4
+const  toggleMusFour = () => {
+    
+    let musRiddleFour = prompt(' Which band wrote the song "Hey Jude" ? ')
+    if (musRiddleFour === 'The Beatles') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 300
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// music question 5
+const  toggleMusFive = () => {
+    
+    let musRiddleFive = prompt(' Which K-POP group is the most known ? ')
+    if (musRiddleFive === 'bts') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 300
         if (isPlayerTurn === true) {
             document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
         } else {
