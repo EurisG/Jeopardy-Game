@@ -182,11 +182,146 @@ const  toggleMathOne = () => {
         
     }
     console.log(playerScoreTracker)
+
 }
 
-// points system with questions 
 
+// ----------------- History Questions ------------
 
+  // history question 1
+  const  toggleHsOne = () => {
+    
+    let hsRiddleOne = prompt(' The year World War I started ? ')
+    if (hsRiddleOne === '1914') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 100
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// history question 2 
+const  toggleHsTwo = () => {
+    
+    let hsRiddleTwo = prompt(' What are the 2 dual court systems ? ')
+    if (hsRiddleTwo === 'Federal and State') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 200
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// history question 3
+const  toggleHsThree = () => {
+    
+    let hsRiddleThree = prompt(' Who was the first African American president ? ')
+    if (hsRiddleThree === 'Obama') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 300
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// history question 4
+const  toggleHsFour = () => {
+    
+    let hsRiddleFour = prompt(' Who was the president during the great depression ? ')
+    if (hsRiddleFour === 'Franklin D. Roosevelt') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 400
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// history question 5
+const  toggleHsFive = () => {
+    
+    let hsRiddleFive = prompt(' Which President never lived in the White House ? ')
+    if (hsRiddleFive === 'George Washington') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 500
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
 
 
 
