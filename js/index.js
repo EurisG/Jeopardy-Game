@@ -7,38 +7,20 @@ const start = document.querySelector('.sBtn')
 const restart = document.querySelector('.rBtn')
 let scoreBoard = 0
 
-// players one true and player two false 
-let isPlayerTurn = true
-let playerScoreTracker = {
-    true : 0,
-    false: 0
-}
 
 
 let winner = true
 
 let timer = document.querySelector('.timer')
 
-// function countDown() {
-//     if (timer === 0){
-//         i++;
-//         clearTimeout();
-//     } else {
-//         timer--
-//         timer.innerHTML = "" + timer
-//         setTimeout(countDown, 1000)
-//     }
-   
-// }
 
-// winner function 
 
 // restart button 
 
 function restartBtn() {
     alert('Please press "start game" to start ! ')
     if (playerScoreTracker[isPlayerTurn] >= 2500){
-        //  playerScoreTracker[isPlayerTurn] = 0 
+       
          playerScoreTracker[isPlayerTurn] = 0
          if (isPlayerTurn === true) {
              document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
@@ -46,9 +28,9 @@ function restartBtn() {
               document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
          }
     } else if(playerScoreTracker[isPlayerTurn] <= 2500) {
-        //  playerScoreTracker[isPlayerTurn] = 0 
+        
         playerScoreTracker[isPlayerTurn] = 0
-        if (isPlayerTurn === true) {
+        if (isPlayerTurn === true ) {
             document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
         } else {
              document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
@@ -58,6 +40,34 @@ function restartBtn() {
 
     }
 
+    if (playerScoreTracker[isPlayerTurn] >= 2500){
+       
+        playerScoreTracker[isPlayerTurn] = 0
+        if (isPlayerTurn === false) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+   } else if(playerScoreTracker[isPlayerTurn] <= 2500) {
+       
+       playerScoreTracker[isPlayerTurn] = 0
+       if (isPlayerTurn === false ) {
+           document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+       } else {
+            document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+       }
+   } else {
+       console.log('Error Please refresh the page ! ')
+
+   }
+
+}
+
+// players one true and player two false 
+let isPlayerTurn = true
+let playerScoreTracker = {
+    true : 0,
+    false: 0
 }
 
 // start button function 
