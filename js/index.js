@@ -324,6 +324,198 @@ const  toggleHsFive = () => {
 }
 
 
+// --------------- Science Questions -------------- 
+
+// science question 1
+const  toggleSciOne = () => {
+    
+    let sciRiddleOne = prompt(' What type of scientist studies motion? ')
+    if (sciRiddleOne === 'Physicist') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 100
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// science question 2
+const  toggleSciTwo = () => {
+    
+    let sciRiddleTwo = prompt('If it is Summer in the United States, what season is it in Australia in the Southern Hemisphere?')
+    if (sciRiddleTwo === 'Winter') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 200
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// science question 3
+const  toggleSciThree = () => {
+    
+    let sciRiddleThree = prompt('What might a larva eventually turn into ?')
+    if (sciRiddleThree === 'Egg') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 300
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// science question 4
+const  toggleSciFour = () => {
+    
+    let sciRiddleFour = prompt('Which object orbits the Earth ?')
+    if (sciRiddleFour === 'Moon') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 400
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// science question 5
+const  toggleSciFive = () => {
+    
+    let sciRiddleFive = prompt(' In what type of rock would you most likely find a fossil ?')
+    if (sciRiddleFive === 'Sedimentary') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 500
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// ----------------- Music Questions --------------
+
+// music question 1
+const  toggleMusOne = () => {
+    
+    let musRiddleOne = prompt(' Which artist sings "All I want for christmas is you" ? ')
+    if (musRiddleOne === 'Mariah Carey') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 100
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
+
+// music question 2
+const  toggleMusTwo = () => {
+    
+    let musRiddleTwo = prompt(' Which artist sings "All I want for christmas is you" ? ')
+    if (musRiddleTwo === 'Mariah Carey') {
+        alert('Correct! Player goes again !')
+        playerScoreTracker[isPlayerTurn] += 100
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+       
+    } else {
+        alert('Incorrect! Next player goes !')
+        playerScoreTracker[isPlayerTurn] -= 50
+        if (isPlayerTurn === true) {
+            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+        } else {
+             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+        }
+        isPlayerTurn = !isPlayerTurn
+        
+    }
+    console.log(playerScoreTracker)
+}
 
 
 // restart button function 
