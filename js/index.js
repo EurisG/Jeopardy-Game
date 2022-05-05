@@ -49,6 +49,20 @@
 // -------------- restart button ----------------------
 
 function restartBtn() {
+  
+    let h5 = document.querySelectorAll('h5')
+    for (let i = 0 ; i < h5.length ; i++){
+        if (h5[i].classList.contains('noCard')) {
+            h5[i].classList.toggle('noCard')
+        }
+    }
+
+    mathArr = [false , false , false , false , false ] 
+    hisArr = [false , false , false , false , false ] 
+    sciArr = [false , false , false , false , false ] 
+    musArr = [false , false , false , false , false ] 
+    spoArr = [false , false , false , false , false ] 
+
     alert('Please press "start game" to start ! ')
     if (playerScoreTracker[isPlayerTurn] >= 2500){
     //    player 1
@@ -58,6 +72,7 @@ function restartBtn() {
          } else {
               document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
          }
+        
     } else if(playerScoreTracker[isPlayerTurn] <= 2500) {
         
         playerScoreTracker[isPlayerTurn] = 0
@@ -66,6 +81,7 @@ function restartBtn() {
         } else {
              document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
         }
+        
     } else {
         console.log('Error Please refresh the page ! ')
 
@@ -92,8 +108,7 @@ function restartBtn() {
 
    }
 
-    // mathArr[0,1,2,3,4] = false
-
+    
 
 }
 
@@ -139,35 +154,35 @@ const  toggleMathOne = () => {
     
     if (mathArr[0] === false){
     
-        let mathRiddleOne = prompt(' 30 + 40 = ? ')
-    
-    if (mathRiddleOne === '70') {
-        alert('Correct! Player goes again !')
-        playerScoreTracker[isPlayerTurn] += 100
+            let mathRiddleOne = prompt(' 30 + 40 = ? ')
         
-        if (isPlayerTurn === true) {
-            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
-        } else {
-             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
-        }
-        let math = document.querySelector('.mathOne')
-        math.classList.toggle('noCard')
-        mathArr[0] = true
+        if (mathRiddleOne === '70') {
+            alert('Correct! Player goes again !')
+            playerScoreTracker[isPlayerTurn] += 100
+            
+            if (isPlayerTurn === true) {
+                document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+            } else {
+                document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+            }
+            let math = document.querySelector('.mathOne')
+            math.classList.toggle('noCard')
+            mathArr[0] = true
 
-    } else {
-        alert('Incorrect! Next player goes !')
-        playerScoreTracker[isPlayerTurn] -= 50
-        if (isPlayerTurn === true) {
-            document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
         } else {
-             document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+            alert('Incorrect! Next player goes !')
+            playerScoreTracker[isPlayerTurn] -= 50
+            if (isPlayerTurn === true) {
+                document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
+            } else {
+                document.querySelector('.scoreBoardTwo').innerHTML = playerScoreTracker[isPlayerTurn]
+            }
+            isPlayerTurn = !isPlayerTurn
+            
         }
-        isPlayerTurn = !isPlayerTurn
-        
+        console.log(playerScoreTracker)
+        console.log(mathArr)
     }
-    console.log(playerScoreTracker)
-    console.log(mathArr)
-}
 }
 
 
