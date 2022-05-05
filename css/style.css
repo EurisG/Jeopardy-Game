@@ -248,7 +248,7 @@ box-shadow: 5px 5px 19px 7px #FFFFFF;
     cursor: pointer;
     
 }
-.timer {
+/* .timer {
     text-align: center;
     font-size: 20px;
     padding: 5px;
@@ -256,7 +256,7 @@ box-shadow: 5px 5px 19px 7px #FFFFFF;
     height: 30px;
     border: 10px solid rgba(237, 22, 22, 0.514);
     color: white;
-}
+} */
 
 /* scoreboard  */
 
@@ -291,6 +291,16 @@ box-shadow: 5px 5px 19px 7px #FFFFFF;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,0.9300063775510204) 0%, rgba(0,12,255,0.9474990889212828) 100%);
     
+}
+
+.playerOne:hover , .playerTwo:hover {
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid rgba(17, 240, 50, 0.738);
+    /* background-color: rgba(31, 31, 223, 0.663); */
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.9300063775510204) 0%, rgba(0,12,255,0.9474990889212828) 100%);
+    animation: 1s ease-in-out;
 }
 
 .playerOne h4 , .playerTwo h4{
