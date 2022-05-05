@@ -92,6 +92,9 @@ function restartBtn() {
 
    }
 
+    // mathArr[0,1,2,3,4] = false
+
+
 }
 
 // ----------- players one true and player two false --------------
@@ -123,14 +126,20 @@ function startGame() {
     }
 }
 
+
+
 // jeopardy question sysytem 
+
+let mathArr = [false , false , false , false , false]
 
 // -------------Math Questions -------------
 
     // math question 1
 const  toggleMathOne = () => {
     
-    let mathRiddleOne = prompt(' 30 + 40 = ? ')
+    if (mathArr[0] === false){
+    
+        let mathRiddleOne = prompt(' 30 + 40 = ? ')
     
     if (mathRiddleOne === '70') {
         alert('Correct! Player goes again !')
@@ -143,7 +152,8 @@ const  toggleMathOne = () => {
         }
         let math = document.querySelector('.mathOne')
         math.classList.toggle('noCard')
-       
+        mathArr[0] = true
+
     } else {
         alert('Incorrect! Next player goes !')
         playerScoreTracker[isPlayerTurn] -= 50
@@ -156,12 +166,15 @@ const  toggleMathOne = () => {
         
     }
     console.log(playerScoreTracker)
+    console.log(mathArr)
+}
 }
 
 
     // math question 2
     const  toggleMathTwo = () => {
     
+        if (mathArr[1] === false) {
 
         let mathRiddleTwo = prompt(' 60 / ? = 5 ')
         if (mathRiddleTwo === '12') {
@@ -174,6 +187,7 @@ const  toggleMathOne = () => {
             }
             let math = document.querySelector('.mathTwo')
             math.classList.toggle('noCard')
+            mathArr[1] = true
 
         } else {
             alert('Incorrect! Next player goes !')
@@ -188,10 +202,12 @@ const  toggleMathOne = () => {
         }
         console.log(playerScoreTracker)
     }
-
+    }
     // math question 3
     const  toggleMathThree = () => {
         
+        if (mathArr[2] === false) {
+
         let mathRiddleThree = prompt(' 9 * 12 = ? ')
         if (mathRiddleThree === '108') {
             alert('Correct! Player goes again !')
@@ -203,7 +219,7 @@ const  toggleMathOne = () => {
             }
             let math = document.querySelector('.mathThree')
             math.classList.toggle('noCard')
-           
+           mathArr[2] = true
         } else {
             alert('Incorrect! Next player goes !')
             playerScoreTracker[isPlayerTurn] -= 50
@@ -217,10 +233,13 @@ const  toggleMathOne = () => {
         }
         console.log(playerScoreTracker)
     }
+    }
 
         // math question 4 
     const  toggleMathFour = () => {
-    
+        
+        if (mathArr[3] === false) {
+
         let mathRiddleFour = prompt(' 55 * 3 = ? ')
         if (mathRiddleFour === '165') {
             alert('Correct! Player goes again !')
@@ -232,6 +251,7 @@ const  toggleMathOne = () => {
             }
             let math = document.querySelector('.mathFour')
             math.classList.toggle('noCard')
+            mathArr[3] = true
            
         } else {
             alert('Incorrect! Next player goes !')
@@ -246,9 +266,12 @@ const  toggleMathOne = () => {
         }
         console.log(playerScoreTracker)
     }
+}
 
    // math question 5 
    const  toggleMathFive = () => {
+
+    if (mathArr[4] === false) {
     
     let mathRiddleFive = prompt("Shane's mom said to take a break after lunch at 12:25 p.m. His break was over at 1:10 p.m. How long was his break?")
     if (mathRiddleFive === '45 min') {
@@ -261,6 +284,7 @@ const  toggleMathOne = () => {
         }
         let math = document.querySelector('.mathFive')
         math.classList.toggle('noCard')
+        mathArr[4] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -275,14 +299,18 @@ const  toggleMathOne = () => {
     }
     console.log(playerScoreTracker)
 
-}
+    }
+ }
 
 
 // ----------------- History Questions ------------
 
+let hisArr = [false , false , false , false , false]
   // history question 1
   const  toggleHsOne = () => {
  
+    if (hisArr[0] === false) {
+
     let hsRiddleOne = prompt(' The year World War I started ? ')
     if (hsRiddleOne === '1914') {
         alert('Correct! Player goes again !')
@@ -294,6 +322,7 @@ const  toggleMathOne = () => {
         }
         let math = document.querySelector('.hsOne')
         math.classList.toggle('noCard')
+        hisArr[0] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -307,10 +336,12 @@ const  toggleMathOne = () => {
         
     }
     console.log(playerScoreTracker)
+    }
 }
-
 // history question 2 
 const  toggleHsTwo = () => {
+
+    if (hisArr[1] === false) {
     
     let hsRiddleTwo = prompt(' What are the 2 dual court systems ? ')
     if (hsRiddleTwo === 'Federal and State') {
@@ -323,6 +354,7 @@ const  toggleHsTwo = () => {
         }
         let math = document.querySelector('.hsTwo')
         math.classList.toggle('noCard')
+        hisArr[1] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -336,10 +368,13 @@ const  toggleHsTwo = () => {
         
     }
     console.log(playerScoreTracker)
+    }
 }
 
 // history question 3
 const  toggleHsThree = () => {
+
+    if (hisArr[2] === false) {
     
     let hsRiddleThree = prompt(' Who was the first African American president ? ')
     if (hsRiddleThree === 'Obama') {
@@ -352,6 +387,7 @@ const  toggleHsThree = () => {
         }
         let math = document.querySelector('.hsThree')
         math.classList.toggle('noCard')
+        hisArr[2] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -365,10 +401,13 @@ const  toggleHsThree = () => {
         
     }
     console.log(playerScoreTracker)
+    }
 }
 
 // history question 4
 const  toggleHsFour = () => {
+
+    if (hisArr[3] === false) {
 
     let hsRiddleFour = prompt(' Who was the president during the great depression ? ')
     if (hsRiddleFour === 'Franklin D. Roosevelt') {
@@ -381,6 +420,7 @@ const  toggleHsFour = () => {
         }
         let math = document.querySelector('.hsFour')
          math.classList.toggle('noCard')
+         hisArr[3] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -394,10 +434,12 @@ const  toggleHsFour = () => {
         
     }
     console.log(playerScoreTracker)
+    }
 }
-
 // history question 5
 const  toggleHsFive = () => {
+
+    if (hisArr[4] === false) {
  
     let hsRiddleFive = prompt(' Which President never lived in the White House ? ')
     if (hsRiddleFive === 'George Washington') {
@@ -410,6 +452,7 @@ const  toggleHsFive = () => {
         }
         let math = document.querySelector('.hsFive')
         math.classList.toggle('noCard')
+        hisArr[4] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -423,13 +466,17 @@ const  toggleHsFive = () => {
         
     }
     console.log(playerScoreTracker)
+    }
 }
 
-
 // --------------- Science Questions -------------- 
+let sciArr = [false , false , false , false , false]
 
 // science question 1
 const  toggleSciOne = () => {
+
+    if (sciArr[0] === false) {
+
 
     let sciRiddleOne = prompt(' What type of scientist studies motion? ')
     if (sciRiddleOne === 'Physicist') {
@@ -442,6 +489,7 @@ const  toggleSciOne = () => {
         }
         let math = document.querySelector('.sciOne')
         math.classList.toggle('noCard')
+        sciArr[0] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -455,10 +503,12 @@ const  toggleSciOne = () => {
         
     }
     console.log(playerScoreTracker)
+    }
 }
-
 // science question 2
 const  toggleSciTwo = () => {
+
+    if (sciArr[1] === false) {
 
     let sciRiddleTwo = prompt('If it is Summer in the United States, what season is it in Australia in the Southern Hemisphere?')
     if (sciRiddleTwo === 'Winter') {
@@ -471,6 +521,7 @@ const  toggleSciTwo = () => {
         }
         let math = document.querySelector('.sciTwo')
          math.classList.toggle('noCard')
+         sciArr[1] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -485,9 +536,12 @@ const  toggleSciTwo = () => {
     }
     console.log(playerScoreTracker)
 }
+}
 
 // science question 3
 const  toggleSciThree = () => {
+
+    if (sciArr[2] === false) {
  
     let sciRiddleThree = prompt('What might a larva eventually turn into ?')
     if (sciRiddleThree === 'Egg') {
@@ -500,6 +554,7 @@ const  toggleSciThree = () => {
         }
         let math = document.querySelector('.sciThree')
         math.classList.toggle('noCard')
+        sciArr[2] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -514,9 +569,12 @@ const  toggleSciThree = () => {
     }
     console.log(playerScoreTracker)
 }
+}
 
 // science question 4
 const  toggleSciFour = () => {
+
+    if (sciArr[3] === false) {
     
     let sciRiddleFour = prompt('Which object orbits the Earth ?')
     if (sciRiddleFour === 'Moon') {
@@ -529,6 +587,7 @@ const  toggleSciFour = () => {
         }
         let math = document.querySelector('.sciFour')
         math.classList.toggle('noCard')
+        sciArr[3] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -543,9 +602,12 @@ const  toggleSciFour = () => {
     }
     console.log(playerScoreTracker)
 }
+}
 
 // science question 5
 const  toggleSciFive = () => {
+
+    if (sciArr[4] === false) {
     
     let sciRiddleFive = prompt(' In what type of rock would you most likely find a fossil ?')
     if (sciRiddleFive === 'Sedimentary') {
@@ -558,6 +620,7 @@ const  toggleSciFive = () => {
         }
         let math = document.querySelector('.sciFive')
         math.classList.toggle('noCard')
+        sciArr[4] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -572,11 +635,15 @@ const  toggleSciFive = () => {
     }
     console.log(playerScoreTracker)
 }
+}
 
 // ----------------- Music Questions --------------
+let musArr = [false , false , false , false , false]
 
 // music question 1
 const  toggleMusOne = () => {
+
+    if (musArr[0] === false) {
     
     let musRiddleOne = prompt(' Which artist sings "All I want for christmas is you" ? ')
     if (musRiddleOne === 'Mariah Carey') {
@@ -589,6 +656,7 @@ const  toggleMusOne = () => {
         }
         let math = document.querySelector('.musOne')
         math.classList.toggle('noCard')
+        musArr[0] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -603,9 +671,12 @@ const  toggleMusOne = () => {
     }
     console.log(playerScoreTracker)
 }
+}
 
 // music question 2
 const  toggleMusTwo = () => {
+
+    if (musArr[1] === false) {
     
     let musRiddleTwo = prompt(' Which artist is known as the "King of Pop" ? ')
     if (musRiddleTwo === 'Michael Jackson') {
@@ -618,6 +689,7 @@ const  toggleMusTwo = () => {
         }
         let math = document.querySelector('.musTwo')
          math.classList.toggle('noCard')
+         musArr[1] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -632,9 +704,11 @@ const  toggleMusTwo = () => {
     }
     console.log(playerScoreTracker)
 }
-
+}
 // music question 3
 const  toggleMusThree = () => {
+
+    if (musArr[2] === false) {
     
     let musRiddleThree = prompt(' Which artist is known as "YEEZY" ? ')
     if (musRiddleThree === 'Kanye West') {
@@ -647,6 +721,7 @@ const  toggleMusThree = () => {
         }
         let math = document.querySelector('.musThree')
         math.classList.toggle('noCard')
+        musArr[2] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -661,9 +736,11 @@ const  toggleMusThree = () => {
     }
     console.log(playerScoreTracker)
 }
-
+}
 // music question 4
 const  toggleMusFour = () => {
+
+    if (musArr[3] === false) {
     
     let musRiddleFour = prompt(' Which band wrote the song "Hey Jude" ? ')
     if (musRiddleFour === 'The Beatles') {
@@ -676,6 +753,7 @@ const  toggleMusFour = () => {
         }
         let math = document.querySelector('.musFour')
          math.classList.toggle('noCard')
+         musArr[3] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -690,10 +768,12 @@ const  toggleMusFour = () => {
     }
     console.log(playerScoreTracker)
 }
-
+}
 // music question 5
 const  toggleMusFive = () => {
-    
+
+    if (musArr[4] === false) {
+
     let musRiddleFive = prompt(' Which K-POP group is the most known ? ')
     if (musRiddleFive === 'bts') {
         alert('Correct! Player goes again !')
@@ -705,6 +785,7 @@ const  toggleMusFive = () => {
         }
         let math = document.querySelector('.musFive')
         math.classList.toggle('noCard')
+        musArr[4] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -719,11 +800,15 @@ const  toggleMusFive = () => {
     }
     console.log(playerScoreTracker)
 }
-
+}
 
 // ------------------ Sport Questions ------------ 
+let spoArr = [false , false , false , false , false]
+
 // sport question 1
 const  toggleSportsOne = () => {
+
+    if (spoArr[0] === false) {
     
     let sportsRiddleOne = prompt(' Who is the greatest basketball player of all time ? ')
     if (sportsRiddleOne === 'Michael Jordan') {
@@ -736,6 +821,7 @@ const  toggleSportsOne = () => {
         }
         let math = document.querySelector('.sportsOne')
         math.classList.toggle('noCard')
+        spoArr[0] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -750,9 +836,12 @@ const  toggleSportsOne = () => {
     }
     console.log(playerScoreTracker)
 }
+}
 
 // sport question 2
 const  toggleSportsTwo = () => {
+
+    if (spoArr[1] === false) {
     
     let sportsRiddleTwo = prompt(' The Olympics are held every how many years ? ')
     if (sportsRiddleTwo === '4 years') {
@@ -765,6 +854,7 @@ const  toggleSportsTwo = () => {
         }
         let math = document.querySelector('.sportsTwo')
         math.classList.toggle('noCard')
+        spoArr[1] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -779,9 +869,12 @@ const  toggleSportsTwo = () => {
     }
     console.log(playerScoreTracker)
 }
+}
 
 // sport question 3
 const  toggleSportsThree = () => {
+
+    if (spoArr[2] === false) {
     
     let sportsRiddleThree = prompt(' What do you call it when a bowler makes three strikes in a row ? ')
     if (sportsRiddleThree === 'Turkey') {
@@ -794,6 +887,7 @@ const  toggleSportsThree = () => {
         }
         let math = document.querySelector('.sportsThree')
         math.classList.toggle('noCard')
+        spoArr[2] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -808,9 +902,11 @@ const  toggleSportsThree = () => {
     }
     console.log(playerScoreTracker)
 }
-
+}
 // sport question 4
 const  toggleSportsFour = () => {
+
+    if (spoArr[3] === false) {
     
     let sportsRiddleFour = prompt(' Which boxer fought against Muhammad Ali and won ? ')
     if (sportsRiddleFour === 'Joe Frazier') {
@@ -823,6 +919,7 @@ const  toggleSportsFour = () => {
         }
         let math = document.querySelector('.sportsFour')
         math.classList.toggle('noCard')
+        spoArr[3] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -837,9 +934,12 @@ const  toggleSportsFour = () => {
     }
     console.log(playerScoreTracker)
 }
+}
 
 // sport question 5
 const  toggleSportsFive = () => {
+
+    if (spoArr[4] === false) {
     
     let sportsRiddleFive = prompt(' How many players are on a baseball teamn ? ')
     if (sportsRiddleFive === '9') {
@@ -852,6 +952,7 @@ const  toggleSportsFive = () => {
         }
         let math = document.querySelector('.sportsFive')
         math.classList.toggle('noCard')
+        spoArr[4] = true
        
     } else {
         alert('Incorrect! Next player goes !')
@@ -866,8 +967,7 @@ const  toggleSportsFive = () => {
     }
     console.log(playerScoreTracker)
 }
-
-
+}
 
 
 
