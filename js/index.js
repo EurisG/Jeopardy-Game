@@ -131,6 +131,7 @@ function startGame() {
 const  toggleMathOne = () => {
     
     let mathRiddleOne = prompt(' 30 + 40 = ? ')
+    
     if (mathRiddleOne === '70') {
         alert('Correct! Player goes again !')
         playerScoreTracker[isPlayerTurn] += 100
