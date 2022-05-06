@@ -32,7 +32,7 @@
 
 
 
-// -------------- Winner Function ----------------------
+// -------------- Winner Function if goal is met ----------------------
 function checkWinner() {
         if (playerScoreTracker[isPlayerTurn] >= 2500){
             if (isPlayerTurn === true){
@@ -45,6 +45,26 @@ function checkWinner() {
     
 }
 
+// --------- winner function if goal is not met and all questions are answered --------
+function winnerStatus() {
+
+    let player1 = playerScoreTracker[true]
+    let player2 = playerScoreTracker[false]
+
+    if (player1 < player2){
+        alert('Player Two is the winner !')
+        
+    } else if(player1 = player2){
+        alert('Tie Game !')
+    }
+    else {
+        alert('Player One is the winner !')
+    }
+  
+
+    console.log(playerScoreTracker[true])
+
+}
 
 
 // -------------- restart button ----------------------
@@ -144,7 +164,7 @@ function startGame() {
 
 
 // jeopardy question sysytem 
-
+var answeredQuestions = 0;
 let mathArr = [false , false , false , false , false]
 
 // -------------Math Questions -------------
@@ -159,10 +179,18 @@ const  toggleMathOne = () => {
         if (mathRiddleOne === '70') {
         
             playerScoreTracker[isPlayerTurn] += 100
-            winner = checkWinner() 
-            if (winner ){
-                return 
-            }
+            answeredQuestions++
+
+            
+                if(answeredQuestions === 25){
+                    winnerStatus()
+                    return
+                } 
+
+                winner = checkWinner() 
+                if (winner ){
+                    return 
+                }
             alert('Correct! Player goes again !')
             if (isPlayerTurn === true) {
                 document.querySelector('.scoreBoardOne').innerHTML = playerScoreTracker[isPlayerTurn]
@@ -199,6 +227,13 @@ const  toggleMathOne = () => {
                 if (mathRiddleTwo === '12') {
 
                     playerScoreTracker[isPlayerTurn] += 200
+                    answeredQuestions++
+
+            
+                    if(answeredQuestions === 25){
+                        winnerStatus()
+                        return
+                    } 
                     winner = checkWinner() 
                     if (winner ){
                         return 
@@ -237,6 +272,13 @@ const  toggleMathOne = () => {
             if (mathRiddleThree === '108') {
                 
                 playerScoreTracker[isPlayerTurn] += 300
+                answeredQuestions++
+
+            
+                if(answeredQuestions === 25){
+                    winnerStatus()
+                    return
+                } 
                 winner = checkWinner() 
                 if (winner ){
                     return 
@@ -276,6 +318,13 @@ const  toggleMathOne = () => {
             if (mathRiddleFour === '165') {
 
                 playerScoreTracker[isPlayerTurn] += 400
+                answeredQuestions++
+
+            
+                if(answeredQuestions === 25){
+                    winnerStatus()
+                    return
+                } 
                 winner = checkWinner() 
                 if (winner ){
                     return 
@@ -314,6 +363,13 @@ const  toggleMathOne = () => {
         let mathRiddleFive = prompt("Shane's mom said to take a break after lunch at 12:25 p.m. His break was over at 1:10 p.m. How long was his break?")
         if (mathRiddleFive === '45 min') {
             playerScoreTracker[isPlayerTurn] += 500
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -357,6 +413,13 @@ let hisArr = [false , false , false , false , false]
         let hsRiddleOne = prompt(' The year World War I started ? ')
         if (hsRiddleOne === '1914') {
             playerScoreTracker[isPlayerTurn] += 100
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -394,6 +457,13 @@ const  toggleHsTwo = () => {
         let hsRiddleTwo = prompt(' What are the 2 dual court systems ? ')
         if (hsRiddleTwo === 'Federal and State') {
             playerScoreTracker[isPlayerTurn] += 200
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -432,6 +502,13 @@ const  toggleHsThree = () => {
         let hsRiddleThree = prompt(' Who was the first African American president ? ')
         if (hsRiddleThree === 'Obama') {
             playerScoreTracker[isPlayerTurn] += 300
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -470,6 +547,13 @@ const  toggleHsFour = () => {
         let hsRiddleFour = prompt(' Who was the president during the great depression ? ')
         if (hsRiddleFour === 'Franklin D. Roosevelt') {
             playerScoreTracker[isPlayerTurn] += 400
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -507,6 +591,13 @@ const  toggleHsFive = () => {
         let hsRiddleFive = prompt(' Which President never lived in the White House ? ')
         if (hsRiddleFive === 'George Washington') {
             playerScoreTracker[isPlayerTurn] += 500
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -549,6 +640,13 @@ const  toggleSciOne = () => {
     let sciRiddleOne = prompt(' What type of scientist studies motion? ')
     if (sciRiddleOne === 'Physicist') {
         playerScoreTracker[isPlayerTurn] += 100
+        answeredQuestions++
+
+            
+        if(answeredQuestions === 25){
+            winnerStatus()
+            return
+        } 
         winner = checkWinner() 
         if (winner ){
             return 
@@ -586,6 +684,13 @@ const  toggleSciTwo = () => {
         let sciRiddleTwo = prompt('If it is Summer in the United States, what season is it in Australia in the Southern Hemisphere?')
         if (sciRiddleTwo === 'Winter') {
             playerScoreTracker[isPlayerTurn] += 200
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -624,6 +729,13 @@ const  toggleSciThree = () => {
         let sciRiddleThree = prompt('What might a larva eventually turn into ?')
         if (sciRiddleThree === 'Egg') {
             playerScoreTracker[isPlayerTurn] += 300
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -662,6 +774,13 @@ const  toggleSciFour = () => {
         let sciRiddleFour = prompt('Which object orbits the Earth ?')
         if (sciRiddleFour === 'Moon') {
             playerScoreTracker[isPlayerTurn] += 400
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -700,6 +819,13 @@ const  toggleSciFive = () => {
         let sciRiddleFive = prompt(' In what type of rock would you most likely find a fossil ?')
         if (sciRiddleFive === 'Sedimentary') {
             playerScoreTracker[isPlayerTurn] += 500
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -741,6 +867,13 @@ const  toggleMusOne = () => {
         let musRiddleOne = prompt(' Which artist sings "All I want for christmas is you" ? ')
         if (musRiddleOne === 'Mariah Carey') {
             playerScoreTracker[isPlayerTurn] += 100
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -779,6 +912,13 @@ const  toggleMusTwo = () => {
         let musRiddleTwo = prompt(' Which artist is known as the "King of Pop" ? ')
         if (musRiddleTwo === 'Michael Jackson') {
             playerScoreTracker[isPlayerTurn] += 200
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -816,6 +956,13 @@ const  toggleMusThree = () => {
         let musRiddleThree = prompt(' Which artist is known as "YEEZY" ? ')
         if (musRiddleThree === 'Kanye West') {
             playerScoreTracker[isPlayerTurn] += 300
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -853,6 +1000,13 @@ const  toggleMusFour = () => {
         let musRiddleFour = prompt(' Which band wrote the song "Hey Jude" ? ')
         if (musRiddleFour === 'The Beatles') {
             playerScoreTracker[isPlayerTurn] += 400
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -890,6 +1044,13 @@ const  toggleMusFive = () => {
         let musRiddleFive = prompt(' Which K-POP group is the most known ? ')
         if (musRiddleFive === 'bts') {
             playerScoreTracker[isPlayerTurn] += 500
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -931,6 +1092,13 @@ const  toggleSportsOne = () => {
         let sportsRiddleOne = prompt(' Who is the greatest basketball player of all time ? ')
         if (sportsRiddleOne === 'Michael Jordan') {
             playerScoreTracker[isPlayerTurn] += 100
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -967,8 +1135,15 @@ const  toggleSportsTwo = () => {
     if (spoArr[1] === false) {
     
         let sportsRiddleTwo = prompt(' The Olympics are held every how many years ? ')
-        if (sportsRiddleTwo === '4 years') {
+        if (sportsRiddleTwo === '4') {
             playerScoreTracker[isPlayerTurn] += 200
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -1007,6 +1182,13 @@ const  toggleSportsThree = () => {
         let sportsRiddleThree = prompt(' What do you call it when a bowler makes three strikes in a row ? ')
         if (sportsRiddleThree === 'Turkey') {
             playerScoreTracker[isPlayerTurn] += 300
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -1044,6 +1226,13 @@ const  toggleSportsFour = () => {
         let sportsRiddleFour = prompt(' Which boxer fought against Muhammad Ali and won ? ')
         if (sportsRiddleFour === 'Joe Frazier') {
             playerScoreTracker[isPlayerTurn] += 400
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
@@ -1082,6 +1271,13 @@ const  toggleSportsFive = () => {
         let sportsRiddleFive = prompt(' How many players are on a baseball team ? ')
         if (sportsRiddleFive === '9') {
             playerScoreTracker[isPlayerTurn] += 500
+            answeredQuestions++
+
+            
+            if(answeredQuestions === 25){
+                winnerStatus()
+                return
+            } 
             winner = checkWinner() 
             if (winner ){
                 return 
